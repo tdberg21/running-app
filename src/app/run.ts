@@ -4,3 +4,4 @@ export interface Run {
   duration: string;
   route: string;
 }
+

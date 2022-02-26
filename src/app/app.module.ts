@@ -5,13 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { RunDetailsComponent } from './run-details/run-details.component';
 import { RunningLogsComponent } from './running-logs/running-logs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RunningLogsComponent
+    RunningLogsComponent,
+    RunDetailsComponent
   ],
   imports: [
     BrowserModule,

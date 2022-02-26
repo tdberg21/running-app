@@ -1,30 +1,18 @@
 <div>
   <h3>Running Logs</h3>
-    <div>
-      <ul class="runs__list">
-        <li *ngFor="let run of runs">
-          <h6>Run # {{run.id}}</h6>
-          <p>Distance: {{run.distance}}</p>
-          <p>Duration: {{run.duration}}</p>
-          <p>Route: {{run.route}}</p>
-          <button type="button" (click)="onSelect(run)">View Details</button>
-        </li>
-      </ul>
-    </div>
-    <!-- <div>
-      <label for="runId">Run #: </label>
-      <input id="runId" [(ngModel)]="runs[1].id" placeholder="runId">
-    </div> -->
-    <div *ngIf="selectedRun">
-    <h2>Run # {{selectedRun.id}} Details</h2>
-    <div class="selected-run">
-          <p>Distance: {{selectedRun.distance}}</p>
-          <p>Duration: {{selectedRun.duration}}</p>
-          <p>Route: {{selectedRun.route}}</p>
-    </div>
+  <div>
+    <ul class="runs__list">
+      <li *ngFor="let run of runs">
+        <h6>Run # {{run.id}}</h6>
+        <p>Distance: {{run.distance}}</p>
+        <p>Duration: {{run.duration}}</p>
+        <p>Route: {{run.route}}</p>
+        <button [class.selected]="run === selectedRun" type="button" (click)="onSelect(run)">View Details</button>
+      </li>
+    </ul>
   </div>
+  <app-run-details [run]="selectedRun"></app-run-details>
 </div>
 
 
 
-      
