@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { Run } from '../run';
 import { RUNS } from "../mock-runs";
@@ -8,7 +8,17 @@ import { RUNS } from "../mock-runs";
   templateUrl: './running-logs.component.html',
   styleUrls: ['./running-logs.component.scss'],
 })
-export class RunningLogsComponent {
+export class RunningLogsComponent implements OnInit{
   title='Running Logs';
   runs = RUNS;
+  
+  selectedRun?: Run;
+
+  ngOnInit(): void {
+  }
+
+  onSelect(run: Run): void {
+    this.selectedRun = run;
+  }
 }
+
