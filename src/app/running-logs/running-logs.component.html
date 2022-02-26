@@ -1,1 +1,21 @@
-<p>{{ title }} will display here</p>
+<div>
+  <h3>Running Logs</h3>
+    <div>
+      <ul>
+        <li *ngFor="let run of runs">
+          <h6>Run # {{run.id}}</h6>
+          <p>Distance: {{run.distance}}</p>
+          <p>Duration: {{run.duration}}</p>
+          <p>Route: {{run.route}}</p>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <label for="runId">Run #: </label>
+      <input id="runId" [(ngModel)]="runs[1].id" placeholder="runId">
+    </div>
+</div>
+
+
+
+      

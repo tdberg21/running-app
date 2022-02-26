@@ -1,4 +1,7 @@
 import { Component } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { Run } from '../run';
+import { RUNS } from "../mock-runs";
 
 @Component({
   selector: 'running-logs-component',
@@ -7,4 +10,5 @@ import { Component } from "@angular/core";
 })
 export class RunningLogsComponent {
   title='Running Logs';
+  runs = RUNS;
 }
