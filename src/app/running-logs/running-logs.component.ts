@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { Run } from '../run';
-import { RUNS } from "../mock-runs";
+import { NewRunsService } from "../new-runs.service";
 
 @Component({
   selector: 'running-logs-component',
@@ -9,16 +9,23 @@ import { RUNS } from "../mock-runs";
   styleUrls: ['./running-logs.component.scss'],
 })
 export class RunningLogsComponent implements OnInit{
-  title='Running Logs';
-  runs = RUNS;
+  constructor(private newRunsService: NewRunsService) {}
+
+  runs: Run[] = [];
   
   selectedRun?: Run;
 
   ngOnInit(): void {
+    this.getRuns();
   }
 
   onSelect(run: Run): void {
     this.selectedRun = run;
+  }
+
+  getRuns(): void {
+    this.newRunsService.getRuns()
+      .subscribe(runs => this.runs = runs);
   }
 }
 
