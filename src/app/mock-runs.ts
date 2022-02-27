@@ -12,3 +12,9 @@ export const RUNS: Run[] = [
   { id: 19, distance: 3.2, duration: '22:37', route: 'Harvard Gulch' },
   { id: 20, distance: 5.5, duration: '46:37', route: 'Sloans' }
 ];
+
+export const STATS:any = {
+  totalDistance: 134.2,
+  totalDuration: '13:43:87',
+  totalPace: '8:43'
+}
