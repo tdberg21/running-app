@@ -22,7 +22,8 @@
   border-radius: 4px;
   display: flex;
   align-items: stretch;
-  height: 2em;
+  height: fit-content;
+  width: auto;
 }
 
 .runs__list button:hover {

@@ -11,7 +11,7 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'logs',
+    path: 'runs',
     component: RunningLogsComponent
   },
   // {

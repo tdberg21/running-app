@@ -1,6 +1,20 @@
 <div>
   <h3>Running Logs</h3>
   <div>
+    <label for="new-run">Distance: </label>
+    <input id="new-run" #runDistance />
+    <label for="new-run">Duration: </label>
+    <input id="new-run" #runDuration />
+    <label for="new-run">Route: </label>
+    <input id="new-run" #runRoute />
+  
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button type="button" class="add-button" (click)="addRun(runDistance.valueAsNumber, runDuration.value, runRoute.value)">
+      Add Run
+    </button>
+  </div>
+
+  <div>
     <ul class="runs__list">
       <li *ngFor="let run of runs">
         <h6>Run # {{run.id}}</h6>

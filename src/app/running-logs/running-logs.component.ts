@@ -27,5 +27,16 @@ export class RunningLogsComponent implements OnInit{
     this.newRunsService.getRuns()
       .subscribe(runs => this.runs = runs);
   }
+
+  addRun(distance: number, duration: string, route: string): void {
+    duration = duration.trim();
+    route = route.trim();
+    console.log(duration)
+    if (!distance) { return; }
+    this.newRunsService.addNewRun({ distance, duration, route } as Run)
+      .subscribe((run: Run) => {
+        this.runs.push(run);
+      });
+  }
 }
 
