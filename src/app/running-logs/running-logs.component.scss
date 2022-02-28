@@ -1,0 +1,54 @@
+.runs__list {
+  list-style-type: none;
+
+  display: flex;
+}
+
+.runs__list li {
+  // display: flex;
+  margin: 0 2em 2em 0;
+  padding: 0;
+  width: 15em;
+}
+
+.runs__list button {
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  align-items: stretch;
+  height: fit-content;
+  width: auto;
+}
+
+.runs__list button:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+  left: .1em;
+}
+
+.runs__list button:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.runs__list button.selected {
+  background-color: black;
+  color: white;
+}
+
+.runs__list button.selected:hover {
+  background-color: #505050;
+  color: white;
+}
+
+.runs__list button.selected:active {
+  background-color: black;
+  color: white;
+}
+
