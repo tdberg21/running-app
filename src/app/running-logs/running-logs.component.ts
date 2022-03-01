@@ -34,9 +34,8 @@ export class RunningLogsComponent implements OnInit{
     this.newRunsService.addNewRun({ distance, duration, route } as Run)
     
       .subscribe((run: Run) => {
-        this.runs.push(run);
+        this.runs.unshift(run);
       });
-      console.log('pushed')
   }
 }
 
