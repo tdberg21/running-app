@@ -28,14 +28,14 @@ export class RunningLogsComponent implements OnInit{
       .subscribe(runs => this.runs = runs);
   }
 
-  addRun(distance: number, duration: string, route: string): void {
-    duration = duration.trim();
-    route = route.trim();
-    console.log(duration)
-    if (!distance) { return; }
+  addRun(distString: string, duration: string, route: string): void {
+    const distance = parseFloat(distString);
+    console.log(distance);
+    if (!duration) { return; }
     this.newRunsService.addNewRun({ distance, duration, route } as Run)
+    
       .subscribe((run: Run) => {
-        this.runs.push(run);
+        this.runs.unshift(run);
       });
   }
 }
