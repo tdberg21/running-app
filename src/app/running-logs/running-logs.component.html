@@ -9,7 +9,7 @@
     <input id="new-run" #runRoute />
   
     <!-- (click) passes input value to add() and then clears the input -->
-    <button type="button" class="add-button" (click)="addRun(runDistance.valueAsNumber, runDuration.value, runRoute.value)">
+    <button type="button" class="add-button" (click)="addRun(runDistance.value, runDuration.value, runRoute.value)">
       Add Run
     </button>
   </div>

@@ -28,7 +28,8 @@ export class RunningLogsComponent implements OnInit{
       .subscribe(runs => this.runs = runs);
   }
 
-  addRun(distance: number, duration: string, route: string): void {
+  addRun(distString: string, duration: string, route: string): void {
+    const distance = parseFloat(distString);
     console.log(distance);
     if (!duration) { return; }
     this.newRunsService.addNewRun({ distance, duration, route } as Run)
