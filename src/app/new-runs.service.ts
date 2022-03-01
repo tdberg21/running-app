@@ -56,7 +56,7 @@ export class NewRunsService {
       
       /** POST: add a new run to the server */
       addNewRun(run: Run): Observable<Run> {
-        RUNS.push(run)
+        RUNS.push(run);
         const newRuns = this.getRuns();
         console.log(newRuns)
         return this.http.post<Run>(this.runsUrl, run, this.httpOptions).pipe(

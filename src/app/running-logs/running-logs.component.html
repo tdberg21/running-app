@@ -1,6 +1,6 @@
-<div>
-  <h3>Running Logs</h3>
-  <div>
+<div class="running-logs-component">
+  <h3 class="running-logs__title">Running Logs</h3>
+  <div class="new-runs__form">
     <label for="new-run">Distance: </label>
     <input id="new-run" #runDistance />
     <label for="new-run">Duration: </label>
@@ -13,7 +13,7 @@
       Add Run
     </button>
   </div>
-
+  <app-run-details [run]="selectedRun"></app-run-details>
   <div>
     <ul class="runs__list">
       <li *ngFor="let run of runs">
@@ -25,7 +25,7 @@
       </li>
     </ul>
   </div>
-  <app-run-details [run]="selectedRun"></app-run-details>
+  
 </div>
 
 

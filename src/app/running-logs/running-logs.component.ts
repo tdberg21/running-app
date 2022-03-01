@@ -29,9 +29,7 @@ export class RunningLogsComponent implements OnInit{
   }
 
   addRun(distance: number, duration: string, route: string): void {
-    duration = duration.trim();
-    route = route.trim();
-    console.log(duration)
+    console.log(distance);
     if (!distance) { return; }
     this.newRunsService.addNewRun({ distance, duration, route } as Run)
       .subscribe((run: Run) => {
