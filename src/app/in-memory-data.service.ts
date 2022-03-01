@@ -33,7 +33,7 @@ export class InMemoryDataService implements InMemoryDbService {
 
   genTotal(runs: Run[]): number {
     const total = runs.reduce((acc, run)=>  (
-      acc + run.distance
+      acc += run.distance
     ), 0)
     return total
   }
