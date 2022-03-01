@@ -19,6 +19,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Improve statistics, make more dynamic and add in graphs and charts
 - Add in real maps
 - Keep improving CSS
+- Make Responsive
 
 
 ## Getting Started 
