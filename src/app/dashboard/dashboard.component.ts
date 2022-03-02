@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Run } from 'api/lib/api-interfaces';
 import { STATS } from '../mock-runs';
+import { RUNS } from '../mock-runs';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,6 +19,10 @@ export class DashboardComponent implements OnInit {
     return STATS;
   }
 
-  stats = this.getStats();
+  getRuns(): Run[] {
+    return RUNS;
+  }
 
+  stats = this.getStats();
+  runs = this.getRuns();
 }

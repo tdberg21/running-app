@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Main Features
 
-- Display stats for the year
+- Display stats for the year with a bar chart of individual runs
 - Display running logs with list of each individual run
 - Add new runs to the log
 - Detailed view of each individual run

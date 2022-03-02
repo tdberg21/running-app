@@ -20,7 +20,12 @@ export class RunningLogsComponent implements OnInit{
   }
 
   onSelect(run: Run): void {
-    this.selectedRun = run;
+    if (this.selectedRun === run) {
+      console.log('unselect')
+      this.selectedRun = undefined;
+    } else {
+      this.selectedRun = run;
+    }
   }
 
   getRuns(): void {

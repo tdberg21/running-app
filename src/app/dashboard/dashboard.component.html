@@ -3,8 +3,12 @@
   <p>Distance: {{stats.totalDistance}}</p>
   <p>Duration: {{stats.totalDuration}}</p>
   <p>Pace: {{stats.totalPace}}</p>
+  <div class="chart-container">
+  <div class="chart-wrap vertical">
+    <h2 class="title">Running History:</h2>
+    <div class="grid">
+      <div *ngFor="let run of runs" class="bar" style="--bar-value:{{run.distance * 10}}%" attr.data-name="{{run.distance}}" title="run.route"></div>  
+    </div>
+  </div>
 </div>
-<!-- <a *ngFor="let run of runs"
-  routerLink="/detail/{{run.id}}">
-  {{run.name}}
-</a> -->
+</div>
